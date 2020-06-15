@@ -1,0 +1,21 @@
+#!/bin/sh
+
+echo "Please enter you name:"
+read USERNAME
+if [ -s ${USERNAME}_dat ]
+then
+	AGE=`cat ${USERNAME}_dat`
+	echo "You are ${AGE} years old"
+else
+	echo "How old are you?"
+	read AGE
+	if [ "$AGE" -le 18 ]
+	then
+		echo "You are too young."
+	elif [ "$AGE" -ge 60 ]
+	then
+		echo "You are too old."
+	else
+		echo $AGE > ${USERNAME}_dat
+	fi
+fi

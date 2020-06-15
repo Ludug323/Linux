@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Please enter list of numbers between 1 and 100"
+read NUMBERS
+
+for num in $NUMBERS
+do
+  if [ "$num" -lt 1 ]||[ "$num" -gt 100 ]
+  then 
+	echo "invalid Number ($num) - must be between 1 and 100!"
+  else
+	echo "${num} is vaild"
+  fi
+done

@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "What time is it?"
+read time
+if [ "$time" -le  12 ]
+then
+	echo "It is morning."
+elif [ "$time" -le 18 ]
+then
+	echo "It is aftermoon."
+else
+	echo "It is night"
+fi 

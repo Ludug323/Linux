@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "Press yes or no"
+read press
+
+case "$press" in
+  yes | y | Yes | YES ) echo "yes!";;
+  n* | N* ) echo "NO!";;
+esac
